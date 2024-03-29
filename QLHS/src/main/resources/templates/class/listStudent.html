@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        CƠ SỞ DỮ LIỆU NGÀNH GIÁO DỤC VÀ ĐÀO TẠO
+    </title>
+    <link rel="shortcut icon" href="images/logo.ico">
+    <link href="https://truong.hanoi.edu.vn/css/banner.css?93" rel="stylesheet">
+    <link href="https://truong.hanoi.edu.vn/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://truong.hanoi.edu.vn/css/toastr.min.css" rel="stylesheet">
+    <link href="https://truong.hanoi.edu.vn/css/style-form.css?93" rel="stylesheet">
+    <link href="https://truong.hanoi.edu.vn/css/style.css?93" rel="stylesheet">
+
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async=""
+            src="https://www.googletagmanager.com/gtag/js?id=G-JMX4EEERRZ&amp;l=dataLayer&amp;cx=c"></script>
+    <script src="https://truong.hanoi.edu.vn/js/jquery-2.1.4.min.js"></script>
+
+    <script src="https://truong.hanoi.edu.vn/js/toastr.min.js?"></script>
+    <script src="https://truong.hanoi.edu.vn/js/main.js?93"></script>
+    <script src="https://truong.hanoi.edu.vn/js/Validate.js?93"></script>
+    <script src="https://truong.hanoi.edu.vn/js/bootstrap.min.js"></script>
+    <script src="https://truong.hanoi.edu.vn/js/js.cookie.js"></script>
+    <script src="https://truong.hanoi.edu.vn/js/lodash.js"></script>
+
+
+    <link href="https://truong.hanoi.edu.vn/css/style-default.css?93" rel="stylesheet">
+
+
+    </script>
+    <link
+            href="/WebResource.axd?d=b8adWYak0tImLef4A3fc9ew5YTzqIK7mNOC1Lcfm4Oz7MjuhfAepqvco2_OfKSuqTrn2bYn6mpHIL3zFhUf9X5D9qXWr8Dxfe0TLi5m3PqOf6If15_3yy-ECUwESFi7xXbl0Fg2&amp;t=638319978764851918"
+            type="text/css" rel="stylesheet" class="Telerik_stylesheet">
+    <link
+            href="/WebResource.axd?d=2LtZVYi89WHmqQf2LLpp80CJC6o3J_xs0QglUS9gnXgz4aUt8f0y8pFGi80POktO4XvK18wX13NuwAdgK6UBZH1chFWl9kiCilC_cUbmcuYb6X_wBpI17ldvOe-S6oBrlK5bksmh-hOpDImUq-Cztn46HaQ1&amp;t=638319978762824328"
+            type="text/css" rel="stylesheet" class="Telerik_stylesheet">
+    <link
+            href="/WebResource.axd?d=vsKpXOsoEwDUfVug9KOqSvRbdW0Jd6eakY5UT0svoluwk0mFuT7cLfTkZiX6q5LqzzfnHiC2i2DZs8pTrBCrB4q5xXfjLJwbU6dE_eDbzL7bzu2j0&amp;t=638319978764851918"
+            type="text/css" rel="stylesheet" class="Telerik_stylesheet">
+    <link
+            href="/WebResource.axd?d=ZC6OEr9O6Jail1KZRYsAMvUsW03VUNkHwf0dR0ZDvdmlvuYN2PflkyZsY1z46sgFRNHsS3zeJ1Xg_M9Nfwz4Sr5VtMT9-xAoSXgW3b4yRELOstG4E3gA50B-0YLtZwgXTj9LpoRsCaeB8Uy5njgMRN00esc1&amp;t=638319978762824328"
+            type="text/css" rel="stylesheet" class="Telerik_stylesheet">
+    <link
+            href="/WebResource.axd?d=6d0ORl_GDQ8il0vfaye5Ycza8hcDEsOcH4eCIqQt8vXEcoF98ahluIYRdaj0ViMLR9dRKWtS0lA4xeN1q0AeHyEvB7lp7QQosmeG3HMCilhzvPbbmnNZRAq9YXqAX4xVBWj0EQ2&amp;t=638319978764851918"
+            type="text/css" rel="stylesheet" class="Telerik_stylesheet">
+    <link
+            href="/WebResource.axd?d=VdPoLqp1pEU6N0-IfFplZCqV6mHJSBFtu0VVE7JvdY4aUmC6fsKcJ6jKnITYLugC-ht5cajYlQd-Tdi8YUZFgVhcyDwhQS_ZaMq9CVvXoEN_u7MJjnUFODX7U567-zaJj4XkCA2&amp;t=638319978764851918"
+            type="text/css" rel="stylesheet" class="Telerik_stylesheet">
+    <link
+            href="/WebResource.axd?d=U4fmqBE__aLMLwH7DJyJBNsnvJ9zxHPXsDdi5xdbkCMHLtrcwBLLfyP6Wh-DIhwo6C7iFmLx6Ir5VMaygDn2r31khqNP5HBkUKT5qqPwa9nfOC5_UrRAN01fN8xrWBxP5pszGg2&amp;t=638319978764851918"
+            type="text/css" rel="stylesheet" class="Telerik_stylesheet">
+    <link
+            href="/WebResource.axd?d=OCeXsoOGHt8E5oeDdHDzDzkKkkrts8L9Z_BKtvc7zLnnlU0ZF9uQ-mWdClg4hY51Ot-rJFnlahDKtm3BarGG7ro7sne1QUk5Mq28jLXNEoCESCAMhjxaXhG2-n09GUr3e-adl4jzIJzjTccjylYbHVxVbeI1&amp;t=638319978762824328"
+            type="text/css" rel="stylesheet" class="Telerik_stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        .navbar-nav .nav-link {
+            border-bottom: none !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: #a9a8a8 !important;
+        }
+        .custom-banner {
+            width: 80px; /* Thay đổi từ 45px thành 80px */
+        }
+
+    </style>
+</head>
+
+<body>
+<div id="qi-banner" class="diaPhuong01 maSo01 container custom-banner">
+    <ul>
+
+        <li id="qi-logo" style="cursor: pointer" onclick="goToHomePage()">
+            <img height="42px" src="https://truong.hanoi.edu.vn/images/CSDLDiaPhuong/HaNoi/logoNho.png">
+        </li>
+        <script>
+            function goToHomePage() {
+                window.location.href = "";
+            }
+        </script>
+        <li id="qi-moet">
+            <span>HANOI-EDU</span>
+        </li>
+        <li id="qi-name-truong" style="cursor: pointer">
+            <span id="qi-span-name-truong" onclick="goHomeLogo()" title="Về trang chủ">TRUNG HỌC CƠ SỞ NGUYỄN TRÃI</span>
+        </li>
+        <li id="qi-software">
+            <div id="ctl00_ctl04_cbSoftware" class="RadComboBox RadComboBox_Bootstrap" style="width:300px;white-space:normal;">
+                <!-- 2019.3.1023.45 -->
+                <table summary="combobox" style="border-width:0;border-collapse:collapse;width:100%"></table>
+            </div>
+        </li>
+        <li id="qi-truy-cap-nhanh">
+            <div class="qi-menu-re" id="qi-menu-truy-cap-nhanh" style="display: none;">
+                <!--Add new div "menu-respon"-->
+                <ul style="display: block;">
+                    <!--Load nội dung ở đây"-->
+                </ul>
+                <a href="#" class="qi-link-menu-respon"></a>
+            </div>
+        </li>
+        <li class="col-sm-6 d-flex justify-content-end">
+            <div>Xin Chào <b>
+                <span sec:authorize="hasRole('TEACHER')">Hoàng Thị Vân Hương</span>
+                <span sec:authorize="hasRole('STUDENT')">Đoàn Trung Đức</span>
+            </b></div>
+            <form action="#" th:action="@{/logout}" method="post">
+                <input type="submit" class="btn btn-warning" value="Đăng Xuất">
+            </form>
+        </li>
+    </ul>
+
+</div>
+<!-- Menu tiếp theo -->
+<!-- Menu tiếp theo -->
+<nav class="navbar navbar-expand-lg navbar-light bg -light mb-4 container">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item" style="margin-left: 20px; margin-right: 20px">
+                <a class="nav-link text-success" href="/teacher/detail?id=1" style="font-size: 8px;"
+                   sec:authorize="hasRole('TEACHER')"
+                >Thông tin cá nhân</a>
+                <a class="nav-link text-success" href="/student/detail?id=1" style="font-size: 8px;"
+                   sec:authorize="hasRole('STUDENT')"
+                >Thông tin cá nhân</a>
+            </li>
+            <li class="nav-item">
+                <a sec:authorize="hasRole('STUDENT')" class="nav-link text-success" href="/student/teacher?id=1" style="font-size: 8px;">Thông tin giáo viên chủ nhiệm</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-success" href="/class/detail?id=1" style="font-size: 8px;">Thông tin lớp học</a>
+            </li>
+            <li class="nav-item" style="margin-left: 20px;">
+                <a class="nav-link text-success" href="/class/listStudent?id=1" style="font-size: 8px;"
+                >Danh sách lớp học</a>
+            </li>
+            <li class="nav-item" style="margin-left: 20px;">
+                <a class="nav-link text-success" href="/class/manage?id=1" style="font-size: 8px;"
+                   sec:authorize="hasRole('TEACHER')"
+                >Quản lý điểm</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+<div class="content container" style="padding: 15px; background-color: #f9f9f9 ">
+    <div class="col-md-6">
+        <div class="label-wrapper">
+            <label class="control-label" style="color: #1e99db; font-size: 20px !important;">Danh sách học sinh</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-6">
+            <div class="label-wrapper">
+                <div></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div></div>
+        </div>
+    </div>
+    <div>
+        <table class="table table-bordered table-striped">
+            <thead class="table-info">
+            <tr>
+                <td>
+                    STT
+                </td>
+                <td>
+                    Mã định danh
+                </td>
+                <td>
+                   Họ tên
+                </td>
+                <td>
+                    Ngày sinh
+                </td>
+                <td>
+                    Giới tính
+                </td>
+                <td>Dân tộc</td>
+                <td>SĐT liên hệ</td>
+                <td sec:authorize="hasRole('TEACHER')">Xử lý</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="student : ${class.getStudents()} ">
+                <td th:text="${student.getId()}" />
+                <td th:text="${student.getIdentifier()}" />
+                <td th:text="${student.getName()}" />
+                <td th:text="${student.getDate()}" />
+                <td th:text="${student.getGenter()}"/>
+                <td th:text="${student.getNation()}"/>
+                <td th:text="${student.getPhone()}"/>
+                <td sec:authorize="hasRole('TEACHER')">
+                    <a th:href="@{/student/detail(id=${student.getId()})}" class="btn btn-info btn-sm">Chi tiết</a>
+                    <a th:href="@{/student/update(id=${student.getId()})}" class="btn btn-warning btn-sm">Chỉnh sửa</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
